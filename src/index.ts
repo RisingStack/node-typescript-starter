@@ -1,4 +1,7 @@
-const app = require('./app')
+'use strict'
+
+const app = require('./App')
+
 const port = process.env.PORT || 3000
 
 app.listen(port, (err) => {
@@ -6,5 +9,5 @@ app.listen(port, (err) => {
     return console.log(err)
   }
 
-  console.log(`server is listening on ${port}`)
+  return console.log(`server is listening on ${port}`)
 })

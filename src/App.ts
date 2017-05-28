@@ -1,18 +1,19 @@
-const path = require('path')
+'use strict'
+
 const express = require('express')
 
 class App {
 
   public express
 
-  constructor() {
+  constructor () {
     this.express = express()
     this.routes()
   }
 
-  private routes(): void {
-    let router = express.Router()
-    router.get('/', (req, res, next) => {
+  private routes (): void {
+    const router = express.Router()
+    router.get('/', (req, res) => {
       res.json({
         message: 'Hello World!'
       })
