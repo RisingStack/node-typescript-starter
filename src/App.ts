@@ -1,6 +1,4 @@
-'use strict'
-
-const express = require('express')
+import * as express from 'express'
 
 class App {
 
@@ -23,4 +21,4 @@ class App {
 
 }
 
-module.exports = new App().express
+export default new App().express

@@ -1,6 +1,4 @@
-'use strict'
-
-const app = require('./App')
+import app from './App'
 
 const port = process.env.PORT || 3000
 

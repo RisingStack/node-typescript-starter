@@ -6,7 +6,9 @@
     es6: true
   parser: typescript-eslint-parser
   parserOptions:
-    sourceType: strict
+    sourceType: module
+    ecmaFeatures: 
+      modules: true
   rules:
     generator-star-spacing:
       - 2
