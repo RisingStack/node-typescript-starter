@@ -5,10 +5,10 @@ class App {
 
   constructor () {
     this.express = express()
-    this.routes()
+    this.mountRoutes()
   }
 
-  private routes (): void {
+  private mountRoutes (): void {
     const router = express.Router()
     router.get('/', (req, res) => {
       res.json({
