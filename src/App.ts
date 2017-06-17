@@ -1,7 +1,6 @@
 import * as express from 'express'
 
 class App {
-
   public express
 
   constructor () {
@@ -18,7 +17,6 @@ class App {
     })
     this.express.use('/', router)
   }
-
 }
 
 export default new App().express
