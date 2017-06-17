@@ -17,3 +17,9 @@ npm test
 ```bash
 npm run lint
 ```
+
+### Building a container
+
+```bash
+docker build .
+```
