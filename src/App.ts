@@ -1,11 +1,11 @@
 import * as express from 'express'
 
 class App {
-  public express
+  public express;
 
   constructor () {
-    this.express = express()
-    this.mountRoutes()
+    this.express = express();
+    this.mountRoutes();
   }
 
   private mountRoutes (): void {
@@ -15,7 +15,7 @@ class App {
         message: 'Hello World!'
       })
     })
-    this.express.use('/', router)
+    this.express.use('/', router);
   }
 }
 
