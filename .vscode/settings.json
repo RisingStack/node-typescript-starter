@@ -3,5 +3,7 @@
         "javascript",
         "javascriptreact",
         "typescript"
-    ]
+    ],
+    "eslint.autoFixOnSave": true,
+    "editor.tabSize": 2
 }

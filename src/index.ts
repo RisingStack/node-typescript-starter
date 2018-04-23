@@ -1,11 +1,21 @@
-import app from './App';
+import App from './App';
+import DBHandleDispatcher from './database/DBHandlerDispatcher';
 
+// Configurations
 const port = process.env.PORT || 3000;
 
-app.listen(port, (err) => {
-  if (err) {
-    return console.log(err);
+// Initialization sequence
+(async () => {
+  try {
+    // Start connection with database
+    await DBHandleDispatcher.initialize();
+    // Start main application
+    await App.initialize();
   }
-
-  return console.log(`server is listening on ${port}`);
-});
+  catch (e) {
+    const error: Error = e;
+    console.log('[ERROR]', error.message);
+    console.log('[FATAL] Terminating due to error in initialization sequence.');
+    process.exit(1);
+  }
+})();

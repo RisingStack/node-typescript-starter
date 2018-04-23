@@ -1,15 +1,15 @@
-## Skeleton for Node.js applications written in TypeScript
+## Move-It: A community-driven courier.
 
 ### Development
 
+## Compile and Run
 ```bash
 npm run dev
 ```
 
-### Running tests
-
+## Database
 ```bash
-npm test
+docker run --name mongo -d -p 27017:27017 mongo
 ```
 
 ### Linting
@@ -17,9 +17,7 @@ npm test
 ```bash
 npm run lint
 ```
-
-### Building a container
-
+or, with fixing: 
 ```bash
-docker build .
+npm run lint:fix
 ```
