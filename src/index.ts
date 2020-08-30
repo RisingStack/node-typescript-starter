@@ -1,11 +1,13 @@
-import app from './App'
+import app from './App';
 
-const port = process.env.PORT || 3000
+const port = Number(process.env.PORT) || 3000;
 
 app.listen(port, (err) => {
   if (err) {
-    return console.log(err)
+    // eslint-disable-next-line no-console
+    return console.log(err);
   }
 
-  return console.log(`server is listening on ${port}`)
-})
+  // eslint-disable-next-line no-console
+  return console.log(`server is listening on ${port}`);
+});
