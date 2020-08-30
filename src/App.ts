@@ -1,22 +1,14 @@
-import * as express from 'express'
+import express, { Router } from 'express';
 
-class App {
-  public express
+const app = express();
 
-  constructor () {
-    this.express = express()
-    this.mountRoutes()
-  }
+const router = Router();
+router.get('/', (req, res) => {
+  res.json({
+    message: 'Hello World!',
+  });
+});
 
-  private mountRoutes (): void {
-    const router = express.Router()
-    router.get('/', (req, res) => {
-      res.json({
-        message: 'Hello World!'
-      })
-    })
-    this.express.use('/', router)
-  }
-}
+app.use('/', router);
 
-export default new App().express
+export default app;
